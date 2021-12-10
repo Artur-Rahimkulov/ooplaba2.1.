@@ -88,50 +88,50 @@ public:
 int Cuboid::getV() {
 	printf("getV() = %d\n", height * width * length);
 	return height * width * length;
-}
-class RectangleINRectangle {
+} 
+class RectangleINRectangle { 
 protected:
-
+	 
 	Rectangle* inner;
 	Rectangle* outer;
-public:
+public: 
 	RectangleINRectangle(const RectangleINRectangle& rir1) {
-		printf("RectangleINRectangle(const RectangleINRectangle& rir1)\n");
-		this->inner = rir1.inner;
+		printf("RectangleINRectangle(const RectangleINRectangle& rir1)\n"); 
+		this->inner = rir1.inner; 
 		this->outer = rir1.outer;
 	};
-	RectangleINRectangle(int h1, int w1, int h2, int w2) {
+	RectangleINRectangle(int h1, int w1, int h2, int w2) { 
 		printf("RectangleINRectangle(int h1, int w1, int h2, int w2)\n");
-		this->inner = new Rectangle(h1, w1);
+		this->inner = new Rectangle(h1, w1); 
 		this->outer = new Rectangle(h2, w2);
 
 	};
-	RectangleINRectangle() {
+	RectangleINRectangle() { 
 		printf("RectangleINRectangle()\n");
-		this->inner = new Rectangle();
+		this->inner = new Rectangle(); 
 		this->outer = new Rectangle();
-
+		 
 	};
 	~RectangleINRectangle() {
 		//delete inner;
 		//delete outer;
-
+		 
 		printf("~RectangleINRectangle\n");
 	}
-	Rectangle getInner() {
+	Rectangle getInner() { 
 		printf("Rectangle getInner()\n");
 		return *inner;
-	}
+	} 
 	Rectangle getOuter() {
 		printf("Rectangle getOuter()\n");
 		return *outer;
 	}
 	void setInner(const Rectangle& r1) {
-		printf("void setInner(const Rectangle& r1)\n");
+		printf("void setInner(const Rectangle& r1)\n"); 
 		(*this->inner) = r1;
 	}
 	void setOuter(const Rectangle& r1) {
-		printf("void setOuter(const Rectangle& r1)\n");
+		printf("void setOuter(const Rectangle& r1)\n"); 
 		(*this->outer) = r1;
 	}
 
@@ -143,11 +143,11 @@ int main()
 		int menu;
 		printf(
 			"\nМеню:\n"
-			"\n1 статически создать"
-			"\n2 динамически создать"
-			"\n3 создание наследуемых обьектов"
-			"\n4 создание обьектов в различных переменных"
-			"\n5 создание и удаление композиции обьектов\n"
+			"\n1 статически создать" 
+			"\n2 динамически создать" 
+			"\n3 создание наследуемых обьектов" 
+			"\n4 создание обьектов в различных переменных" 
+			"\n5 создание и удаление композиции обьектов\n" 
 		);
 		scanf_s("%d", &menu);
 		switch (menu)
@@ -199,32 +199,32 @@ int main()
 			printf("создание обьектов в различных переменных\n");
 
 			Rectangle* r1 = new Cuboid(3, 4, 5);
-			//int i = (*r1).getHeight();
-			//i = (*r1).getS();
-			//i = (*r1).getWidth();
-			//(*r1).setHeight(5);
-			//(*r1).setWidth(5);
+			int i = (*r1).getHeight();
+			i = (*r1).getS();
+			i = (*r1).getWidth();
+			(*r1).setHeight(5);
+			(*r1).setWidth(5);
 			delete r1;
-			//Cuboid *c2 = new Cuboid(1, 2, 3);
-			//i = (*c2).getHeight();
-			//i = (*c2).getLength();
-			//i = (*c2).getS();
-			//i = (*c2).getV();
-			//i = (*c2).getWidth();
-			//(*c2).setHeight(5);
-			//(*c2).setLength(5);
-			//(*c2).setWidth(5);
-			//delete c2;
+			Cuboid *c2 = new Cuboid(1, 2, 3);
+			i = (*c2).getHeight();
+			i = (*c2).getLength();
+			i = (*c2).getS();
+			i = (*c2).getV();
+			i = (*c2).getWidth();
+			(*c2).setHeight(5);
+			(*c2).setLength(5);
+			(*c2).setWidth(5);
+			delete c2;
 		}
 		break;
 
 		case 5:
 		{
-			//printf("создание и удаление композиции обьектов\n");
+			printf("создание и удаление композиции обьектов\n");
 
-			//RectangleINRectangle rir1;
-			//RectangleINRectangle rir2(1, 2, 3, 4);
-			//RectangleINRectangle rir3(rir2);
+			RectangleINRectangle rir1;
+			RectangleINRectangle rir2(1, 2, 3, 4);
+			RectangleINRectangle rir3(rir2);
 
 		}
 		break;
