@@ -220,11 +220,11 @@ int main()
 
 		case 5:
 		{
-			printf("создание и удаление композиции обьектов\n");
+			//printf("создание и удаление композиции обьектов\n");
 
-			RectangleINRectangle rir1;
-			RectangleINRectangle rir2(1, 2, 3, 4);
-			RectangleINRectangle rir3(rir2);
+			//RectangleINRectangle rir1;
+			//RectangleINRectangle rir2(1, 2, 3, 4);
+			//RectangleINRectangle rir3(rir2);
 
 		}
 		break;
