@@ -199,21 +199,21 @@ int main()
 			printf("создание обьектов в различных переменных\n");
 
 			Rectangle* r1 = new Cuboid(3, 4, 5);
-			int i = (*r1).getHeight();
-			i = (*r1).getS();
-			i = (*r1).getWidth();
-			(*r1).setHeight(5);
-			(*r1).setWidth(5);
+			//int i = (*r1).getHeight();
+			//i = (*r1).getS();
+			//i = (*r1).getWidth();
+			//(*r1).setHeight(5);
+			//(*r1).setWidth(5);
 			delete r1;
 			Cuboid *c2 = new Cuboid(1, 2, 3);
-			i = (*c2).getHeight();
-			i = (*c2).getLength();
-			i = (*c2).getS();
-			i = (*c2).getV();
-			i = (*c2).getWidth();
-			(*c2).setHeight(5);
-			(*c2).setLength(5);
-			(*c2).setWidth(5);
+			//i = (*c2).getHeight();
+			//i = (*c2).getLength();
+			//i = (*c2).getS();
+			//i = (*c2).getV();
+			//i = (*c2).getWidth();
+			//(*c2).setHeight(5);
+			//(*c2).setLength(5);
+			//(*c2).setWidth(5);
 			delete c2;
 		}
 		break;
